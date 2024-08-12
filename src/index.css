@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700;900&display=swap");
+
+@font-face {
+    font-family: WalsheimBold;
+    src: url("../public/font/Walsheim-Bold.otf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: WalsheimMedium;
+    src: url("../public/font/Walsheim-Medium.otf");
+}
+
+* {
+    font-family: 'WalsheimMedium', sans-serif;
+}
+
+body {
+    background: url("../public/images/main.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-element {
+    background-color: #F6EACB;
+}
+
+.active {
+    background: linear-gradient(45deg, #ff014f 20%, #011eff 70%);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#ff014f] to-[#011eff] font-bold;
+}
+
+.bg-gradient {
+    background: linear-gradient(
+        92.23deg,
+        #406aff 21.43%,
+        #3bace2 50.63%,
+        #b936ee 100%,
+        #ff56f6 117.04%
+    );
+}
+.section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
 }
